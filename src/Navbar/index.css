@@ -1,0 +1,43 @@
+.header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+    height: 10vh;
+    padding: 10px 20px;
+    overflow-x: hidden;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #00aaff;
+    cursor: pointer;
+}
+
+.header-logo {
+    font-size: 25px;
+    margin: 0;
+}
+
+.header-subtitle {
+    font-size: 15px;
+}
+
+.logout-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+}

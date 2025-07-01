@@ -1,0 +1,182 @@
+.results-container {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right,
+        #DBBCC4,
+        #F3DFD8,
+        #D8BFD0,
+        #B7B1D5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.results-content-failed {
+    background: #fff;
+    margin-top: 5%;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    width: 60%;
+    padding: 2.5rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    position: relative;
+    animation: fadeIn 0.7s;
+}
+
+.results-content-passed {
+    background: #fff url('https://assets.ccbp.in/frontend/react-js/quiz-game-congrats-card-bg.png') center/cover no-repeat;
+    margin-top: 5%;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    width: 60%;
+    padding: 2.5rem 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    position: relative;
+    animation: fadeIn 0.7s;
+}
+
+.results-heading{
+    color: #334155;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.percentage{
+    color: #0EA5E9;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.questions-attempted{
+    color: #475569;
+    font-size: 1rem;
+}
+
+.result{
+    color: #334155;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.results-image-pass,
+.results-image-lose {
+    width: 25%;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.results-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #6C3483;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.results-status {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(90deg, #6C3483 60%, #B7B1D5 100%);
+    border-radius: 1rem;
+    padding: 0.4rem 1.2rem;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.results-status.fail {
+    background: linear-gradient(90deg, #C0392B 60%, #F3DFD8 100%);
+}
+
+.results-summary {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+.results-summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    color: #444;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.results-summary-row:last-child {
+    border-bottom: none;
+}
+
+.results-percentage {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #6C3483;
+    margin: 0.5rem 0 0.2rem 0;
+    text-align: center;
+}
+
+.results-action-btn {
+    margin-top: 1.2rem;
+    padding: 0.7rem 2.2rem;
+    background: linear-gradient(90deg, #6C3483 60%, #B7B1D5 100%);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(108, 52, 131, 0.08);
+}
+
+.results-action-btn:hover {
+    background: linear-gradient(90deg, #512E5F 60%, #B7B1D5 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+@media (max-width: 600px) {
+    .results-content {
+        max-width: 95vw;
+        padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    }
+
+    .results-title {
+        font-size: 1.3rem;
+    }
+
+    .results-percentage {
+        font-size: 1.3rem;
+    }
+
+    .results-image-pass,
+    .results-image-lose {
+        width: 80px;
+        height: 80px;
+    }
+}
