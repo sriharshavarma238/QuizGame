@@ -82,6 +82,7 @@ function LoginPage() {
                 id="showPassword"
                 checked={showPassword}
                 onChange={() => setShowPassword(!showPassword)}
+                className="show-password-checkbox"
               />
               <label htmlFor="showPassword" className="show-password-label">
                 Show Password
