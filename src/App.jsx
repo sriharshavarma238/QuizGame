@@ -10,7 +10,9 @@ import NotFOund from './NotFound'
 function App() {
   return(
     <Routes>
-      <Route path="/login" element={<LoginPage />} />
+      <Route path="/login" element={
+        <Login />}
+      />
       <Route
         path="/"
         element={
@@ -19,7 +21,9 @@ function App() {
           </ProtectedRoute>
         }
       />
-      <Route path="/quiz" element={<QuizGame />} />
+      <Route path="/quiz" element={<ProtectedRoute>
+        <QuizGame />
+      </ProtectedRoute>} />
       <Route path="*" element={<NotFOund />} />
     </Routes>
   )
